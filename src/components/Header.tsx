@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex items-center gap-3 text-primary">
             <BookOpen className="w-8 h-8 md:w-10 md:h-10" />
             <span className="text-sm md:text-base font-medium tracking-widest uppercase">
-              Biblioteca de Conscienciologia
+              Videoteca de Conscienciologia
             </span>
           </div>
 
