@@ -3,19 +3,12 @@ import { Youtube, Heart, BookOpen } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="mt-20 border-t border-border bg-card/50">
-      <div className="container py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-10">
+        <div className="mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3 text-foreground">
             <BookOpen className="w-6 h-6 text-primary" />
             <span className="font-display text-xl font-semibold">Consciencioteca</span>
           </div>
-
-          <div className="flex items-center gap-1 text-muted-foreground text-sm">
-            <span>Feito com</span>
-            <Heart className="w-4 h-4 text-primary fill-primary" />
-            <span>para expandir consciências</span>
-          </div>
-
           <a
             href="https://www.youtube.com/channel/UCVtOayNt8ZoszDU_YACFSQg"
             target="_blank"

@@ -8,20 +8,28 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="container py-12 md:py-16">    
+      <main className="w-full px-4 sm:px-6 lg:px-8 py-10 md:py-14">
 
         {/* Playlist grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {playlists.map((playlist, index) => (
-            <PlaylistCard
-              key={playlist.id}
-              playlistId={playlist.id}
-              title={playlist.title}
-              description={playlist.description}
-              thumbnail={playlist.thumbnail}
-              index={index}
-            />
-          ))}
+        <div className="mx-auto w-full">
+          {/* Ajuste a LARGURA MÍNIMA dos cards aqui:
+              - 220px  -> cards mais estreitos (cabem mais por linha)
+              - 260px+ -> cards mais largos (cabem menos por linha)
+              Basta trocar o valor abaixo em minmax(220px, 1fr). */}
+          <div
+            className="grid gap-4 md:gap-5 xl:gap-6 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]"
+          >
+            {playlists.map((playlist, index) => (
+              <PlaylistCard
+                key={playlist.id}
+                playlistId={playlist.id}
+                title={playlist.title}
+                description={playlist.description}
+                thumbnail={playlist.thumbnail}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </main>
 

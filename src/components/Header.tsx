@@ -13,7 +13,7 @@ const Header = () => {
               Biblioteca de Conscienciologia
             </span>
           </div>
-          
+
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-foreground">
             Consciencioteca
           </h1>
@@ -22,7 +22,10 @@ const Header = () => {
             href="https://www.youtube.com/channel/UCVtOayNt8ZoszDU_YACFSQg"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 mt-4 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-glow hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 rounded-full 
+            bg-[#FBBF77] text-primary-foreground 
+            font-medium transition-all duration-300 
+            hover:bg-[#F59E0B] hover:shadow-glow hover:scale-105"
           >
             <Youtube className="w-5 h-5" />
             Visitar Canal no YouTube
