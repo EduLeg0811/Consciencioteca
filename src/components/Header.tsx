@@ -18,10 +18,6 @@ const Header = () => {
             Consciencioteca
           </h1>
           
-          <p className="max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
-            Explore playlists de vídeos da Conscienciologia.
-          </p>
-          
           <a
             href="https://www.youtube.com/channel/UCVtOayNt8ZoszDU_YACFSQg"
             target="_blank"
