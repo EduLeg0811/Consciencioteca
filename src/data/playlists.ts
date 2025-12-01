@@ -4,49 +4,124 @@
 // The ID is: PLaTPd9NtvVwUpH4wT5Io6X6129Vv2_6M5
 
 export interface Playlist {
-  id: string;
+  id?: string;
   title: string;
   description: string;
   thumbnail: string;
+  type?: "playlist" | "folder";
+  slug?: string;
+  children?: Playlist[];
 }
 
 export const playlists: Playlist[] = [
+
   {
     id: "PLaTPd9NtvVwUpH4wT5Io6X6129Vv2_6M5", // Substitua pelo ID real da playlist
     title: "Círculo Mentalsomático",
     description: "Tertuliarium",
     thumbnail: "/files/IMG_7609.JPG",
   },
+
+
+
+  // Zéfiro
   {
-    id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
-    title: "Entrevistas Zéfiro 1",
-    description: "Tertuliarium",
-    thumbnail: "/files/IMG_7612.JPG",
+    title: "Zéfiro",
+    description: "Coleções de entrevistas Zéfiro",
+    thumbnail: "/files/Zephyrus.jpg",
+    type: "folder",
+    slug: "zefiro",
+    children: [
+      {
+        id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
+        title: "Entrevistas Zéfiro 1",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_7612.JPG",
+        type: "playlist",
+      },
+      {
+        id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
+        title: "Entrevistas Zéfiro 2",
+        description: "Entrevistas Zéfiro & EM; Waldo Vieira; Tertuliarium; 2012", 
+        thumbnail: "/files/IMG_7621.JPG",
+        type: "playlist",
+      },
+    ],
   },
+
+  
+  // Recortes de várias coleções
   {
-    id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
-    title: "Entrevistas Zéfiro 2",
-    description: "Entrevistas Zéfiro & EM; Waldo Vieira; Tertuliarium; 2012", 
-    thumbnail: "/files/IMG_7621.JPG",
+    title: "Recortes Selecionados",
+    description: "Recortes selecionados",
+    thumbnail: "/files/IMG_7550.JPG",
+    type: "folder",
+    slug: "recortes-selecionados",
+    children: [
+
+      {
+        id: "PLaTPd9NtvVwVzNxBqbCxpIMmCuvPazvbO", // Substitua pelo ID real da playlist
+        title: "Recortes Selecionados de Tertúlias Waldo Vieira",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_7550.JPG",
+      },
+      {
+        id: "PLaTPd9NtvVwXSDNzkaj_6Ja_HinL2mPeQ", // Substitua pelo ID real da playlist
+        title: "Recortes Selecionados Círculo Mentalsomático",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_7711.JPG",
+      },
+    ],
   },
+
+
+  // EM
   {
-    id: "PLaTPd9NtvVwVzNxBqbCxpIMmCuvPazvbO", // Substitua pelo ID real da playlist
-    title: "Recortes Selecionados de Tertúlias Waldo Vieira",
-    description: "Tertuliarium",
-    thumbnail: "/files/IMG_8327.JPG",
+    title: "EM",
+    description: "Coleções de entrevistas EM",
+    thumbnail: "/files/EM tertuliarium.png",
+    type: "folder",
+    slug: "EM",
+    children: [
+      {
+        id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
+        title: "Entrevistas EM 1",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_7612.JPG",
+        type: "playlist",
+      },
+      {
+        id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
+        title: "Entrevistas EM 2",
+        description: "Entrevistas EM; Waldo Vieira; Tertuliarium; 2012", 
+        thumbnail: "/files/EM.png",
+        type: "playlist",
+      },
+    ],
   },
+
+  // Recortes de várias coleções
   {
-    id: "PLaTPd9NtvVwXSDNzkaj_6Ja_HinL2mPeQ", // Substitua pelo ID real da playlist
-    title: "Recortes Selecionados Círculo Mentalsomático",
-    description: "Tertuliarium",
-    thumbnail: "/files/IMG_8061.JPG",
-  },
-  {
-    id: "PLaTPd9NtvVwUxkFLTsM7UkgsSz8U5c7kP", // Substitua pelo ID real da playlist
     title: "Videos Antigos (VHS Holoteca)",
-    description: "Tertuliarium",
+    description: "Videos antigos (VHS Holoteca) - registros históricos",
     thumbnail: "/files/IMG_8371.JPG",
-  },{
+    type: "folder",
+    slug: "videos-antigos",
+    children: [
+
+
+      {
+        id: "PLaTPd9NtvVwUxkFLTsM7UkgsSz8U5c7kP", // Substitua pelo ID real da playlist
+        title: "Videos Antigos (VHS Holoteca)",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_8371.JPG",
+      },
+
+    ],
+  },
+  
+    
+  {
     id: "PLaTPd9NtvVwU5204hqRbpqPRQypebDlTf", // Substitua pelo ID real da playlist
     title: "Registros CCCI",
     description: "Tertuliarium",
@@ -66,4 +141,22 @@ export const playlists: Playlist[] = [
     thumbnail: "/files/Al-Ghazali.jpg",
   },
 ];
+
+export const getPlaylistsForPath = (segments: string[]): Playlist[] => {
+  let currentLevel: Playlist[] = playlists;
+
+  for (const segment of segments) {
+    const folder = currentLevel.find(
+      (item) => item.type === "folder" && item.slug === segment && item.children
+    );
+
+    if (!folder || !folder.children) {
+      return [];
+    }
+
+    currentLevel = folder.children;
+  }
+
+  return currentLevel;
+};
 
