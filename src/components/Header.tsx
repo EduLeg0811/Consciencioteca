@@ -14,6 +14,8 @@ const Header = () => {
             Consciencioteca
           </h1>
 
+         
+
           <div className="flex items-center gap-3 text-primary">
             <BookOpen className="w-8 h-8 md:w-10 md:h-10" />
             <span className="text-sm md:text-base font-medium tracking-widest uppercase">
@@ -21,7 +23,15 @@ const Header = () => {
             </span>
           </div>
 
-         
+          <a
+            href="https://www.youtube.com/channel/UCVtOayNt8ZoszDU_YACFSQg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-glow hover:scale-105"
+          >
+            <Youtube className="w-5 h-5" />
+            Visitar Canal no YouTube
+          </a>
           
          
         </div>

@@ -15,15 +15,6 @@ export interface Playlist {
 
 export const playlists: Playlist[] = [
 
-  {
-    id: "PLaTPd9NtvVwUpH4wT5Io6X6129Vv2_6M5", // Substitua pelo ID real da playlist
-    title: "Círculo Mentalsomático",
-    description: "Tertuliarium",
-    thumbnail: "/files/IMG_7609.JPG",
-  },
-
-
-
   // Zéfiro
   {
     title: "Zéfiro",
@@ -34,14 +25,14 @@ export const playlists: Playlist[] = [
     children: [
       {
         id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
-        title: "Entrevistas Zéfiro 1",
-        description: "Tertuliarium",
+        title: "Entrevistas Zéfiro 1 - 03/02/2012",
+        description: "Zefiro #1 - 5 Partes - 03/02/2012",
         thumbnail: "/files/IMG_7612.JPG",
         type: "playlist",
       },
       {
         id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
-        title: "Entrevistas Zéfiro 2",
+        title: "Entrevistas Zéfiro 2 - ",
         description: "Entrevistas Zéfiro & EM; Waldo Vieira; Tertuliarium; 2012", 
         thumbnail: "/files/IMG_7621.JPG",
         type: "playlist",
@@ -49,6 +40,72 @@ export const playlists: Playlist[] = [
     ],
   },
 
+  
+  // EM
+  {
+    title: "EM",
+    description: "Entrevistas EM",
+    thumbnail: "/files/EM - Tertuliarium.jpg",
+    type: "folder",
+    slug: "EM",
+    children: [
+      {
+        id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
+        title: "Entrevistas EM 1",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_7612.JPG",
+        type: "playlist",
+      },
+      {
+        id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
+        title: "Entrevistas EM 2",
+        description: "Entrevistas EM; Waldo Vieira; Tertuliarium; 2012", 
+        thumbnail: "/files/EM.png",
+        type: "playlist",
+      },
+
+      {
+        id: "PLaTPd9NtvVwXs2D6-q2t4y_Wc5HRlpl23", // Substitua pelo ID real da playlist
+        title: "E.M. - Grupo SJC - 21/05/1988",
+        description: "Tertuliarium",
+        thumbnail: "/files/IMG_9713.JPG",
+        type: "playlist",
+      },
+
+    ],
+  },
+
+
+  {
+    id: "PLaTPd9NtvVwUpH4wT5Io6X6129Vv2_6M5", // Substitua pelo ID real da playlist
+    title: "Círculo Mentalsomático",
+    description: "Tertuliarium",
+    thumbnail: "/files/IMG_7609.JPG",
+  },
+
+
+
+  // Vídeos Antigos VHS
+  {
+    title: "Videos Antigos",
+    description: `Videos antigos (VHS Holoteca)\nRegistros históricos\nHoloteca`,
+    thumbnail: "/files/IMG_8371.JPG",
+    type: "folder",
+    slug: "videos-antigos",
+    children: [
+
+
+      {
+        id: "PLaTPd9NtvVwUxkFLTsM7UkgsSz8U5c7kP", // Substitua pelo ID real da playlist
+        title: "Pilares do Parapsiquismo #2",
+        description: "Pilares do Parapsiquismo\n2o. Encontro\nJulho de 2002",
+        thumbnail: "/files/IMG_8371.JPG",
+      },
+
+    ],
+  },
+  
+  
   
   // Recortes de várias coleções
   {
@@ -74,52 +131,6 @@ export const playlists: Playlist[] = [
     ],
   },
 
-
-  // EM
-  {
-    title: "EM",
-    description: "Coleções de entrevistas EM",
-    thumbnail: "/files/EM tertuliarium.png",
-    type: "folder",
-    slug: "EM",
-    children: [
-      {
-        id: "PLaTPd9NtvVwUGZdRjbByen_UZ062J_yuW", // Substitua pelo ID real da playlist
-        title: "Entrevistas EM 1",
-        description: "Tertuliarium",
-        thumbnail: "/files/IMG_7612.JPG",
-        type: "playlist",
-      },
-      {
-        id: "PLaTPd9NtvVwXZuCOs6LNa8JncDUe_N_n5", // Substitua pelo ID real da playlist
-        title: "Entrevistas EM 2",
-        description: "Entrevistas EM; Waldo Vieira; Tertuliarium; 2012", 
-        thumbnail: "/files/EM.png",
-        type: "playlist",
-      },
-    ],
-  },
-
-  // Recortes de várias coleções
-  {
-    title: "Videos Antigos (VHS Holoteca)",
-    description: "Videos antigos (VHS Holoteca) - registros históricos",
-    thumbnail: "/files/IMG_8371.JPG",
-    type: "folder",
-    slug: "videos-antigos",
-    children: [
-
-
-      {
-        id: "PLaTPd9NtvVwUxkFLTsM7UkgsSz8U5c7kP", // Substitua pelo ID real da playlist
-        title: "Videos Antigos (VHS Holoteca)",
-        description: "Tertuliarium",
-        thumbnail: "/files/IMG_8371.JPG",
-      },
-
-    ],
-  },
-  
     
   {
     id: "PLaTPd9NtvVwU5204hqRbpqPRQypebDlTf", // Substitua pelo ID real da playlist
@@ -128,12 +139,7 @@ export const playlists: Playlist[] = [
     thumbnail: "/files/IMG_9629.JPG",
   },
   
-  {
-    id: "PLaTPd9NtvVwXs2D6-q2t4y_Wc5HRlpl23", // Substitua pelo ID real da playlist
-    title: "E.M. - Grupo SJC - 21/05/1988",
-    description: "Tertuliarium",
-    thumbnail: "/files/IMG_9713.JPG",
-  },
+  
   {
     id: "PLaTPd9NtvVwUpZwJ4iAfL-re7vz4VfKnf", // Substitua pelo ID real da playlist
     title: "Al Ghazali'",

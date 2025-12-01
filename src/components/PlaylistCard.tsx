@@ -72,10 +72,13 @@ const PlaylistCard = ({
 
         {/* Content */}
         <div className="p-3 md:p-4">
-          <h3 className="font-display text-base md:text-lg font-semibold text-foreground mb-1 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+          <h3 className="font-display text-base md:text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-muted-foreground text-xs md:text-sm line-clamp-2 leading-snug">
+          <p
+            className="text-muted-foreground text-xs md:text-sm leading-snug"
+            style={{ whiteSpace: "pre-line" }}
+          >
             {description}
           </p>
         </div>
