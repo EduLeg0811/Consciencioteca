@@ -71,6 +71,7 @@ const Index = () => {
                   title={playlist.title}
                   description={playlist.description}
                   thumbnail={playlist.thumbnail}
+                  url={playlist.url}
                   index={index}
                   isFolder={isFolder}
                   onClick={

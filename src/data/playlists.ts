@@ -11,6 +11,7 @@ export interface Playlist {
   type?: "playlist" | "folder";
   slug?: string;
   children?: Playlist[];
+  url?: string;
 }
 
 export const playlists: Playlist[] = [
@@ -99,7 +100,28 @@ export const playlists: Playlist[] = [
         id: "PLaTPd9NtvVwUxkFLTsM7UkgsSz8U5c7kP", // Substitua pelo ID real da playlist
         title: "Pilares do Parapsiquismo #2",
         description: "Pilares do Parapsiquismo\n2o. Encontro\nJulho de 2002",
-        thumbnail: "/files/IMG_8371.JPG",
+        thumbnail: "/files/IMG_9713.JPG",
+      },
+
+      {
+        title: "Google Drive - DISK 1",
+        description: "Acesso direto à pasta de vídeos antigos no Google Drive",
+        thumbnail: "/files/Folder_PNG.png",
+        url: "https://drive.google.com/drive/folders/1V7OCMa6UfsPeWSab5dttCxpAQLquNr4o?usp=sharing",
+      },
+
+      {
+        title: "Google Drive - DISK 2",
+        description: "Acesso direto à pasta de vídeos antigos no Google Drive",
+        thumbnail: "/files/Folder_PNG.png",
+        url: "https://drive.google.com/drive/folders/1XGIzaTz4ABAZguf4GbC9UnghUBRfq_sU?usp=drive_link",
+      },
+
+      {
+        title: "Google Drive - DISK 3",
+        description: "Acesso direto à pasta de vídeos antigos no Google Drive",
+        thumbnail: "/files/Folder_PNG.png",
+        url: "https://drive.google.com/drive/folders/1hZQUtbWspyqMf9MDWoFRiCxDNYDNOgXS?usp=sharing",
       },
 
     ],

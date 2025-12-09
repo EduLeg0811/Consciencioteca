@@ -5,6 +5,7 @@ interface PlaylistCardProps {
   description: string;
   thumbnail: string;
   playlistId?: string;
+  url?: string;
   index: number;
   isFolder?: boolean;
   onClick?: () => void;
@@ -15,6 +16,7 @@ const PlaylistCard = ({
   description,
   thumbnail,
   playlistId,
+  url,
   index,
   isFolder,
   onClick,
@@ -22,6 +24,8 @@ const PlaylistCard = ({
   const youtubeUrl = playlistId
     ? `https://www.youtube.com/playlist?list=${playlistId}`
     : undefined;
+
+  const linkUrl = url ?? youtubeUrl;
 
   const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     if (isFolder) {
@@ -39,7 +43,7 @@ const PlaylistCard = ({
 
     return (
       <a
-        href={youtubeUrl}
+        href={linkUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="group block opacity-0 animate-fade-up"
