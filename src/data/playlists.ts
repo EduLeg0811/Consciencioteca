@@ -107,21 +107,21 @@ export const playlists: Playlist[] = [
         title: "Google Drive - DISK 1",
         description: "Acesso direto à pasta de vídeos antigos no Google Drive",
         thumbnail: "/files/Folder_PNG.png",
-        url: "https://drive.google.com/drive/folders/1V7OCMa6UfsPeWSab5dttCxpAQLquNr4o?usp=sharing",
+        url: "https://drive.google.com/drive/folders/1SJHwqx6K5Y_Z1TsTcCM0C4aIo9ejvWhF?usp=sharing",
       },
 
       {
         title: "Google Drive - DISK 2",
         description: "Acesso direto à pasta de vídeos antigos no Google Drive",
         thumbnail: "/files/Folder_PNG.png",
-        url: "https://drive.google.com/drive/folders/1XGIzaTz4ABAZguf4GbC9UnghUBRfq_sU?usp=drive_link",
+        url: "https://drive.google.com/drive/folders/1XGIzaTz4ABAZguf4GbC9UnghUBRfq_sU?usp=sharing",
       },
 
       {
         title: "Google Drive - DISK 3",
         description: "Acesso direto à pasta de vídeos antigos no Google Drive",
         thumbnail: "/files/Folder_PNG.png",
-        url: "https://drive.google.com/drive/folders/1hZQUtbWspyqMf9MDWoFRiCxDNYDNOgXS?usp=sharing",
+        url: "https://drive.google.com/drive/folders/1flq8ubHYPwstc-p00sJBKgG3adzCmCik?usp=sharing",
       },
 
     ],
